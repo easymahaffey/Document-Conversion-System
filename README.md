@@ -50,6 +50,9 @@ pip install pdf2docx python-docx
 
 ###Not Used:
 - **Singleton** Avoided for converters to keep instances stateless and reusable.
+
+- While designing the system, I explored a few other patterns that could have added value in certain scenarios. The Strategy Pattern seemed like a good fit if I needed to let users choose conversion methods dynamically at runtime. I also considered the Chain of Responsibility, which would be helpful for automatically chaining multiple conversions—like going from PDF to DOCX and then to TXT. The Observer Pattern was another option, useful for notifying a UI or logging system during conversion progress, but it felt unnecessary at this stage. As for the Singleton Pattern, I decided not to use it for converters. Keeping them stateless and reusable just made more sense—it keeps things flexible and avoids complications if I want to run multiple conversions in parallel later on.
+
 ---
 
 ## Extensibility
